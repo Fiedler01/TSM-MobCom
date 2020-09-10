@@ -3,16 +3,12 @@
 This github repository contains all Android code related to demos and exercises of this MSE course. For slides, exercise sheets, etc. refer to Moodle.
 
 Unit 1 - General introduction, activity lifecycle, geo-location
-....
 
 Unit 2 - Lists, RecyclerView, Fragments
-....
 
 Unit 3 - Intent resolution 
-...
 
 Unit 4 - SQLite, content providers, application architecture / Room
-....
 
 ## Installation
 
