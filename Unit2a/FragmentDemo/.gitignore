@@ -1,0 +1,12 @@
+/build
+/bin
+/*.iml
+/.gradle
+/.project
+/.classpath
+__MACOSX/
+/.idea
+/.metadata
+/local.properties
+/.settings
+/gen

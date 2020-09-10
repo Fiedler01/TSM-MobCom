@@ -1,0 +1,23 @@
+<!-- this the layout for the landscape case -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <fragment
+        android:id="@+id/titles"
+        class="com.example.fragmentdemo.TitlesFragment"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/details"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?android:attr/detailsElementBackground" />
+    <!-- http://developer.android.com/reference/android/R.attr.html#detailsElementBackground -->
+
+</LinearLayout>

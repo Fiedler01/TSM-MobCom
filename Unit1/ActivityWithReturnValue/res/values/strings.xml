@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Activity With Return Value</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_title">Android Exercise</string>
+    <string name="main_welcomeText">Welcome! This app illustrates how to hand over parameters among activities</string>
+    <string name="main_buttontext_activityA">Start Life cycle Activity</string>
+    <string name="main_buttontext_questionActivity">Start Activity with return value</string>
+    <string name="question_buttontext">Reply</string>
+    <string name="main_text_name">Your name is: </string>
+    <string name="main_text_age">Your age is: </string>
+
+</resources>
