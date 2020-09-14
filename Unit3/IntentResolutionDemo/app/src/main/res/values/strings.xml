@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Intent Resolution Demo</string>
+    <string name="calltabbuttontxt">Button</string>
+    <string name="calltabtextviewtxt">Push the button to launch a call to the HQ</string>
+    <string name="maptabbuttontxt">Button</string>
+    <string name="maptabtextviewtxt">Push the button to display a map with the camp location</string>
+    <string name="webtabbuttontxt">Button</string>
+    <string name="webtabtextviewtxt">Push the button to display the website</string>
+    <string name="tab_call">Call</string>
+    <string name="tab_web">Web</string>
+    <string name="tab_map">Map</string>
+</resources>
