@@ -106,8 +106,9 @@ public class MainActivity extends AppCompatActivity {
 
     class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
-        SampleFragmentPagerAdapter(FragmentManager fm) {
-            super(fm);
+
+        public SampleFragmentPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+            super(fm, behavior);
         }
 
         @Override

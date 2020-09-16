@@ -19,6 +19,7 @@ public class TitlesFragment extends ListFragment {
 	boolean mDualPane;
 	int mCurCheckPosition = 0; // checked position in list
 
+
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);

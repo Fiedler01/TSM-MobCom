@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+
+
 /**
  * This is the secondary fragment, displaying the details of a particular item.
  */
