@@ -18,7 +18,7 @@ Clone the repository on your computer.
 git clone https://github.com/romme86/TSM_MobCom-HS20.git
 ```
 
-From **Android Studio** explore the cloned folders with the "file > open" menu, choose the exercise folder (the folder should have an android icon) and open it.
+From **Android Studio** explore the cloned folders with the "file > open" menu, choose the **exercise folder** (the folder should have an **android icon**) and open it.
 
 Wait for Android Studio to index the files (you will see a loading spinning wheel), update whatever is required and follow the instructions.
 
