@@ -15,7 +15,7 @@ Unit 4 - SQLite, content providers, application architecture / Room
 Clone the repository on your computer.
 
 ```bash
-git clone https://github.com/romme86/TSM_MobCom-HS20.git
+git clone https://github.com/Fiedler01/TSM-MobCom-HS20/TSM_MobCom-HS20.git
 ```
 
 From **Android Studio** explore the cloned folders with the "file > open" menu, choose the **exercise folder** (the folder should have an **android icon**) and open it.
