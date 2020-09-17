@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CloudExercise</string>
+    <string name="message_composer">Message Composer:</string>
+    <string name="post">Post</string>
+    <string name="single_value">Single Value:</string>
+    <string name="launch_singleactivity">Launch SingleActivity</string>
+    <string name="object">Object:</string>
+    <string name="launch_composeractivity">Launch ComposerActivity</string>
+    <string name="launch_vieweractivity">Launch ViewerActivity</string>
+    <string name="lists">Lists:</string>
+    <string name="launch_messagesactivity">Launch MessagesActivity</string>
+    <string name="new_message">New Message</string>
+    <string name="value">Value</string>
+    <string name="update_value">Update Value</string>
+    <string name="viewer">Viewer</string>
+    <string name="upvote">Upvote</string>
+</resources>

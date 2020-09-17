@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "870072930694",
+    "firebase_url": "https://cloudexercise-11d89.firebaseio.com",
+    "project_id": "cloudexercise-11d89",
+    "storage_bucket": "cloudexercise-11d89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870072930694:android:e3b2cc24ab6ecbec735c07",
+        "android_client_info": {
+          "package_name": "ch.bfh.ti.cloudexercise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870072930694-3u1hb5ntbsuk5fob9rb6op88g0puur3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9ybk0JPxgbfSWaWMO82PQVmruiDrflsU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870072930694-3u1hb5ntbsuk5fob9rb6op88g0puur3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

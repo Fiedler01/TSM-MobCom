@@ -1,0 +1,4 @@
+#Thu Sep 17 10:43:40 CEST 2020
+base.0=C\:\\Users\\marig\\Desktop\\CloudSolution\\CloudSolution\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
