@@ -1,2 +1,2 @@
-include ':com.example.android.rssfeed'
-include ':com.example.android.rssfeedlibrary'
+include ':app'
+rootProject.name = "My Application"
