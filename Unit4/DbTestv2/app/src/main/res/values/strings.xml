@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DbTestv2</string>
+    <string name="empty">No events yet!</string>
+    <string name="divider">|</string>
+</resources>
