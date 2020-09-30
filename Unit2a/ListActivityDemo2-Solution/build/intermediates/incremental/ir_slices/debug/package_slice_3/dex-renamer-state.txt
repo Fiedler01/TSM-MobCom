@@ -1,0 +1,4 @@
+#Thu Oct 11 10:22:56 CEST 2018
+base.0=D\:\\FHNW\\_Master\\TSM_MobOp\\2_Android_Applications\\2a_ListActivityDemo2_Solution\\build\\intermediates\\transforms\\dexMerger\\debug\\3
+path.0=classes.dex
+renamed.0=classes.dex

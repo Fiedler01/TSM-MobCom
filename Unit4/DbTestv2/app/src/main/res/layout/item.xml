@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:padding="10sp">
+    <TextView
+        android:id="@+id/rowid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/rowidseparator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/divider"
+        android:layout_toRightOf="@id/rowid"
+        android:layout_toEndOf="@id/rowid" />
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/rowidseparator"
+        android:layout_toEndOf="@id/rowidseparator" />
+    <TextView
+        android:id="@+id/timeseparator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/divider"
+        android:layout_toRightOf="@id/time"
+        android:layout_toEndOf="@id/time" />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textStyle="italic"
+        android:layout_toRightOf="@id/timeseparator"
+        android:layout_toEndOf="@id/timeseparator" />
+</RelativeLayout>
