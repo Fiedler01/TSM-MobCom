@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RoomDemo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dog_name">Dog Name</string>
+    <string name="dog_age">Dog Age</string>
+    <string name="dog_breed">Dog Breed</string>
+    <string name="dog_save">Save dog</string>
+</resources>
