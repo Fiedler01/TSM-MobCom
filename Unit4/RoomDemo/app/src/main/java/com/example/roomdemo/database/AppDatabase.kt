@@ -11,8 +11,8 @@ abstract class AppDatabase: RoomDatabase() {
 
     companion object{
 
-        @Volatile
-        private var instance: AppDatabase? = null
+        @Volatile // writes to this field are immediately visible to other threads
+        private var instance: AppDatabase? = null  // nullable field
 
         fun getInstance(context: Context): AppDatabase {
             val tempInstance = instance

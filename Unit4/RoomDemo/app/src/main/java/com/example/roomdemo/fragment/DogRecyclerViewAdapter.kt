@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.dog_row.view.*
 
 class DogRecyclerViewAdapter: RecyclerView.Adapter<DogRecyclerViewAdapter.DogViewHolder>() {
 
-    private var dogList: List<Dog> = emptyList()
+    private var dogList: List<Dog> = emptyList() // convenient initializer
 
     class DogViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
@@ -27,6 +27,8 @@ class DogRecyclerViewAdapter: RecyclerView.Adapter<DogRecyclerViewAdapter.DogVie
     }
 
     override fun onBindViewHolder(holder: DogViewHolder, position: Int) {
+        // reference to the view items is found in the ViewHolder
+
         val currentItem = dogList[position]
         holder.itemView.textViewDogId.text = currentItem.id.toString()
         holder.itemView.textViewDogName.text = currentItem.name

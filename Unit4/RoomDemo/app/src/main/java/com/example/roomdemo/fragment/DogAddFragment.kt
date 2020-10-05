@@ -20,6 +20,7 @@ import org.w3c.dom.Text
 class DogAdd : Fragment() {
 
     private lateinit var mDogViewModel: DogViewModel
+    // to not initialize non null variables, we have to guarantee it will be initialized tho
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,12 +47,13 @@ class DogAdd : Fragment() {
             val dog = Dog(0, dogName, dogAge, dogBreed)
             mDogViewModel.addDog(dog)
             Toast.makeText(requireContext(), "Successfully added your dog!", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_dogAdd_to_dogList)
+            findNavController().navigate(R.id.action_dogAdd_to_dogList) // simple to navigate
         } else {
             Toast.makeText(requireContext(), "Please fill all the fields to go forward", Toast.LENGTH_SHORT).show()
         }
     }
 
+    // TODO validate age
     private fun inputCheckForEmpty(dogName: String, dogBreed:String): Boolean {
         return !(TextUtils.isEmpty(dogName) && TextUtils.isEmpty(dogBreed))
     }

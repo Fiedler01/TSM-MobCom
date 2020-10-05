@@ -32,6 +32,8 @@ class DogList : Fragment() {
 
         mDogViewModel = ViewModelProvider(this).get(DogViewModel::class.java)
         mDogViewModel.readAllDog.observe(viewLifecycleOwner, Observer { dog -> adapter.setData(dog) })
+            // observing changes in the LiveData
+
 
         view.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_dogList_to_dogAdd)

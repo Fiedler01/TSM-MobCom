@@ -7,8 +7,9 @@ import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface DogDao {
-    @Query("SELECT * FROM Dog")
+interface DogDao { // abstract access to database
+
+    @Query("SELECT * FROM Dog") // neat
     fun getAll(): LiveData<List<Dog>>
 
     @Insert

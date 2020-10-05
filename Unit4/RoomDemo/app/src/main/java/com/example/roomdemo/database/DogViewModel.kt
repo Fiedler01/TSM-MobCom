@@ -18,7 +18,7 @@ class DogViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun addDog(dog: Dog) {
-        viewModelScope.launch (Dispatchers.IO){// this is using kotlin coroutines, it will basically run the code in a background thread
+        viewModelScope.launch (Dispatchers.IO){ // this is using kotlin coroutines, it will basically run the code in a background thread
             dogRepository.addDog(dog)
         }
     }
