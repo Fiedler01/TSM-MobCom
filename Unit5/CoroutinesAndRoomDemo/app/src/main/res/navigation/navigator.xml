@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigator"
+    app:startDestination="@id/dogList">
+
+    <fragment
+        android:id="@+id/dogList"
+        android:name="com.example.roomdemo.fragment.DogList"
+        android:label="Dog list"
+        tools:layout="@layout/fragment_dog_list" >
+        <action
+            android:id="@+id/action_dogList_to_dogAdd"
+            app:destination="@id/dogAdd" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogAdd"
+        android:name="com.example.roomdemo.fragment.DogAdd"
+        android:label="Add dog"
+        tools:layout="@layout/fragment_dog_add" >
+        <action
+            android:id="@+id/action_dogAdd_to_dogList"
+            app:destination="@id/dogList" />
+    </fragment>
+</navigation>

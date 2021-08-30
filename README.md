@@ -10,6 +10,8 @@ Unit 3 - Intent resolution
 
 Unit 4 - SQLite, content providers, application architecture / Room
 
+Unit 5 - Coroutines
+
 ## Installation
 
 Clone the repository on your computer.
