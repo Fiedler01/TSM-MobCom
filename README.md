@@ -1,4 +1,4 @@
-# TSM_MobCom-HS20
+# TSM_MobCom
 
 This github repository contains all Android code related to demos and exercises of this MSE course. For slides, exercise sheets, etc. refer to Moodle.
 
@@ -17,7 +17,7 @@ Unit 5 - Coroutines
 Clone the repository on your computer.
 
 ```bash
-git clone https://github.com/Fiedler01/TSM-MobCom-HS20/TSM_MobCom-HS20.git
+git clone https://github.com/Fiedler01/TSM-MobCom/TSM_MobCom.git
 ```
 
 From **Android Studio** explore the cloned folders with the "file > open" menu, choose the **exercise folder** (the folder should have an **android icon**) and open it.
