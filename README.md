@@ -20,8 +20,8 @@ Clone the repository on your computer.
 git clone https://github.com/Fiedler01/TSM-MobCom/TSM_MobCom.git
 ```
 
-From **Android Studio** explore the cloned folders with the "file > open" menu, choose the **exercise folder** (the folder should have an **android icon**) and open it.
+From **Android Studio** explore the cloned folders with the "file > open" menu, choose and open the **exercise folder** (the folder should have an **android icon**).
 
-Wait for Android Studio to index the files (you will see a loading spinning wheel), update whatever is required and follow the instructions.
+Wait for Android Studio to index the files (you will see a loading spinning wheel), update whatever this is required and follow the instructions.
 
-It should now be possible to execute the exercise/demo in your emulator/physical smartphone.
+It should then be possible to execute the exercise/demo on the emulator or your physical smartphone.
