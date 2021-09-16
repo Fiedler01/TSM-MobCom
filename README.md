@@ -17,7 +17,7 @@ Unit 5 - Coroutines
 Clone the repository on your computer.
 
 ```bash
-git clone https://github.com/Fiedler01/TSM-MobCom/TSM_MobCom.git
+git clone https://github.com/Fiedler01/TSM-MobCom.git
 ```
 
 From **Android Studio** explore the cloned folders with the "file > open" menu, choose and open the **exercise folder** (the folder should have an **android icon**).
