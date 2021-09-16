@@ -1,27 +1,15 @@
-buildscript {
-    repositories {
-        jcenter()
-        mavenCentral()
-        google()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
-    }
-}
 apply plugin: 'com.android.application'
 
+repositories {
+    google()
+    jcenter()
+}
+
 dependencies {
-    implementation fileTree(include: '*.jar', dir: 'libs')
 }
 
 android {
     compileSdkVersion 29
-
-    defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 29
-    }
-
     buildToolsVersion '28.0.3'
 
     sourceSets {
@@ -47,11 +35,19 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
+    defaultConfig {
+        minSdkVersion 26
+        targetSdkVersion 29
+    }
 }
-
-allprojects {
+buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
     }
 }
