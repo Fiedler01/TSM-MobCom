@@ -24,4 +24,4 @@ From **Android Studio** explore the cloned folders with the "file > open" menu, 
 
 Wait for Android Studio to index the files (you will see a loading spinning wheel), update whatever this is required and follow the instructions.
 
-Then you should be able to execute the exercise/demo on the emulator as well as on your physical device.
+Then you should be able to execute the exercise/demo code on the emulator as well as on your physical device.
