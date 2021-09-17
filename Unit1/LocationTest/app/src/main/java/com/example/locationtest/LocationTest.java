@@ -41,7 +41,7 @@ public class LocationTest extends Activity implements LocationListener {
         tv = findViewById(R.id.tv);
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // Permission is not granted
-            requestPermission(Manifest.permission.ACCESS_FINE_LOCATION, MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+            requestPermission();
         } else {
             // Permission is granted
             executeLocationCode();
@@ -141,25 +141,21 @@ public class LocationTest extends Activity implements LocationListener {
     }
 
 
-    private void requestPermission(String permissionName, int permissionRequestCode) {
+    private void requestPermission() {
         ActivityCompat.requestPermissions(this,
-                new String[]{permissionName}, permissionRequestCode);
+                new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LocationTest.MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
-                    executeLocationCode();
-                } else {
-                    log("Location permissions denied");
-                }
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION) {// If request is cancelled, the result arrays are empty.
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // permission was granted, yay! Do the
+                // contacts-related task you need to do.
+                executeLocationCode();
+            } else {
+                log("Location permissions denied");
             }
-
         }
     }
 
