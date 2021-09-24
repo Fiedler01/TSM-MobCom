@@ -5,18 +5,17 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.android.tools.build:gradle:7.0.2'
     }
 }
 apply plugin: 'com.android.application'
 
 dependencies {
-    implementation 'com.android.support:support-compat:28.0.0'
-    implementation 'com.android.support:support-fragment:28.0.0'
+    implementation 'com.android.support:support-compat:30.0.0'
+    implementation 'com.android.support:support-fragment:30.0.0'
 }
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 30
 
     sourceSets {
         main {
@@ -43,7 +42,7 @@ android {
     }
     defaultConfig {
         minSdkVersion 26
-        targetSdkVersion 28
+        targetSdkVersion 30
     }
 }
 

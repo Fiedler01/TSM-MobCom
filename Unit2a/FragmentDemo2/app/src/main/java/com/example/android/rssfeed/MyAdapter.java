@@ -13,8 +13,8 @@ import java.util.List;
 
 public class MyAdapter extends ArrayAdapter<RssEntry> {
 
-    private Context context;
-    private List<RssEntry> items;
+    private final Context context;
+    private final List<RssEntry> items;
 
     MyAdapter(Context context, int textViewResourceId,
               List<RssEntry> items) {

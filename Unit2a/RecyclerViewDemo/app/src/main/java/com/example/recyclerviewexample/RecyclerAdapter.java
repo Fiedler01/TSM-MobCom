@@ -11,7 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder> {
-    private List<String> countryNames, countryAbbreviations;
+    private final List<String> countryNames;
+    private final List<String> countryAbbreviations;
 
     RecyclerAdapter(List<String> countryNames, List<String> countryAbbreviations) {
         this.countryNames = countryNames;
@@ -38,7 +39,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         return countryNames.size();
     }
 
-    class RecyclerViewHolder extends RecyclerView.ViewHolder {
+    static class RecyclerViewHolder extends RecyclerView.ViewHolder {
         TextView Tx_country;
         TextView Tx_country_abr;
 
