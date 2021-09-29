@@ -1,4 +1,4 @@
-#Thu Sep 17 10:44:30 CEST 2020
-base.0=C\:\\Users\\marig\\Desktop\\CloudSkeleton\\CloudSkeleton\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
-path.0=classes.dex
+#Wed Sep 29 17:05:52 CEST 2021
+base.0=C\:\\Users\\marig\\tsmobcom\\TSM-MobCom\\Unit2b\\CloudSkeleton\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
+path.0=classes.dex
