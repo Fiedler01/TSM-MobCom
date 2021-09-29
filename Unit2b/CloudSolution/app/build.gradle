@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion '29'
+    compileSdkVersion 30
     defaultConfig {
         applicationId "ch.bfh.ti.cloudexercise"
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -24,10 +23,10 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.google.firebase:firebase-database:19.4.0'
-    implementation 'com.google.firebase:firebase-core:17.5.0'
-    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'com.google.firebase:firebase-database:20.0.2'
+    implementation 'com.google.firebase:firebase-core:19.0.1'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 apply plugin: 'com.google.gms.google-services'
