@@ -8,7 +8,7 @@ Unit 2 - Lists, RecyclerView, Fragments
 
 Unit 3 - Intent resolution 
 
-Unit 4 - SQLite, content providers, application architecture / Room
+Unit 4 - Content providers, application architecture / Room
 
 Unit 5 - Coroutines
 
