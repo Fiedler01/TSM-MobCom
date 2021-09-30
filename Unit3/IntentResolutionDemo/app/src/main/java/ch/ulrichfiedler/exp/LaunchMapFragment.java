@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import java.util.Objects;
+
 public class LaunchMapFragment extends Fragment {
     Button mapTabButton;
 
@@ -27,7 +29,7 @@ public class LaunchMapFragment extends Fragment {
         // level
         final Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
 
-        if (Util.canBeResolved(getActivity(), mapIntent)) {
+        if (Util.canBeResolved(Objects.requireNonNull(getActivity()), mapIntent)) {
             mapTabButton.setEnabled(true);
             mapTabButton.setOnClickListener(arg0 -> startActivity(mapIntent));
         } else {

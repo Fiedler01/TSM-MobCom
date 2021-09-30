@@ -1,8 +1,0 @@
-
-Jsquid:S1199‡"-Extract this nested code block into a method.(·ÿ½äûÿÿÿÿ
-hsquid:S1301†"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ
-esquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(²Ú±Ž
-squid:S1186="€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™Î«þÿÿÿÿ
-squid:S1186@"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ø´´øÿÿÿÿ
-csquid:CallToDeprecatedMethodn"<Remove this use of "FragmentPagerAdapter"; it is deprecated.(‘í›\
-V"squid:SwitchLastCaseIsDefaultCheck†""Add a default case to this switch.(×ö³–úÿÿÿÿ

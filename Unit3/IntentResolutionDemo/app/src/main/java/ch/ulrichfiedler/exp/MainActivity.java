@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private List<SamplePagerItem> mTabs = new ArrayList<>();
+    private final List<SamplePagerItem> mTabs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    class SamplePagerItem {
+    static class SamplePagerItem {
         private final CharSequence mTitle;
         private final int mIndicatorColor;
         private final int mDividerColor;
@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
             super(fm, behavior);
         }
 
+        @NonNull
         @Override
         public Fragment getItem(int i) {
             return mTabs.get(i).getFragment();
