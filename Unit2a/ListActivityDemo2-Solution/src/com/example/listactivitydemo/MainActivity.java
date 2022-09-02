@@ -11,7 +11,11 @@ import static java.lang.String.format;
 import static java.util.Locale.getDefault;
 
 /*
- * Implements a very simple list activity for demo purposes
+ * Implements a very simple list activity for demo purposes.
+ *
+ * ListActivity is deprecated in API 30 but it is important to understand
+ * how it works for the objectives of this lecture.
+ * It can be replaced by androidx.ListFragment.
  */
 public class MainActivity extends ListActivity {
     private final RowData[] rowData = new RowData[64];

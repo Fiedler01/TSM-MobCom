@@ -1,21 +1,21 @@
 buildscript {
     repositories {
-        jcenter()
-        mavenCentral()
         google()
+        mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.2'
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 apply plugin: 'com.android.application'
 
 dependencies {
-    implementation 'com.android.support:support-compat:30.0.0'
-    implementation 'com.android.support:support-fragment:30.0.0'
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'androidx.fragment:fragment:1.5.2'
 }
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
 
     sourceSets {
         main {
@@ -41,14 +41,15 @@ android {
         release.setRoot('build-types/release')
     }
     defaultConfig {
-        minSdkVersion 26
-        targetSdkVersion 30
+        minSdkVersion 27
+        targetSdkVersion 33
     }
 }
 
 allprojects {
     repositories {
         google()
+        mavenCentral()
         jcenter()
     }
 }

@@ -23,7 +23,7 @@ import java.util.List;
 
 public class Utils {
 
-  private static StatusTracker mStatusTracker = StatusTracker.getInstance();
+  private static final StatusTracker mStatusTracker = StatusTracker.getInstance();
 
   /**
    * Helper method to print out the lifecycle state of each Activity.  Note this has

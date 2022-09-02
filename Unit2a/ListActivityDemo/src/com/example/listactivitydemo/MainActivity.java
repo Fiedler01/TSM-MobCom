@@ -11,7 +11,11 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /*
- * displays a list with dummy content
+ * Displays a list with dummy content.
+ *
+ * ListActivity is deprecated in API 30 but it is important to understand
+ * how it works for the objectives of this lecture.
+ * It can be replaced by androidx.ListFragment.
  */
 public class MainActivity extends ListActivity {
     List<String> mValues = new ArrayList<>();
@@ -28,7 +32,7 @@ public class MainActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.arrayadapterdemo.R.layout.main);
+        setContentView(com.example.listactivitydemo.R.layout.main);
 
         loadContent();
 

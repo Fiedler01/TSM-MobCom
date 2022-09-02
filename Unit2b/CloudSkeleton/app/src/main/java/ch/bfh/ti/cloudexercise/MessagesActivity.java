@@ -18,6 +18,10 @@ import com.google.firebase.database.Query;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The ListActivity class has been deprecated in API 30 but it is still
+ * used here for consistency with the sample code in the previous lectures.
+ */
 public class MessagesActivity extends ListActivity {
     private final List<KeyMessagePair> keyMessagePairs = new ArrayList<>();
     private MessageAdapter adapter;

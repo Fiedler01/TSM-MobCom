@@ -4,7 +4,11 @@ import android.app.ListActivity;
 import android.os.Bundle;
 
 /*
- * Implements a very simple list activity for demo purposes
+ * Implements a very simple list activity for demo purposes.
+ *
+ * ListActivity is deprecated in API 30 but it is important to understand
+ * how it works for the objectives of this lecture.
+ * It can be replaced by androidx.ListFragment.
  */
 public class MainActivity extends ListActivity {
 	public void onCreate(Bundle icicle) {

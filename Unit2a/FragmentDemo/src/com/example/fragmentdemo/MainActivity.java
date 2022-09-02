@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.i("FragementDemo", "MainActivity:onCreate runs ... ");
+		Log.i("FragmentDemo", "MainActivity:onCreate runs ... ");
 
 		setContentView(R.layout.fragment_layout);
 	}
