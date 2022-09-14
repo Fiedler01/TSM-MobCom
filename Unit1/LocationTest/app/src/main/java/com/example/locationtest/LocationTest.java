@@ -52,10 +52,13 @@ public class LocationTest extends Activity implements LocationListener {
     @Override
     protected void onResume() {
         super.onResume();
-        // To save battery only request updates only when activity
-        // displaying results runs in foreground
+        // To save battery only request updates when activity that displays
+        // runs in foreground
         if (best != null) {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
+                    PackageManager.PERMISSION_GRANTED &&
+                    ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) !=
+                            PackageManager.PERMISSION_GRANTED) {
                 return;
             }
             mgr.requestLocationUpdates(best, 15000, 1, this);
