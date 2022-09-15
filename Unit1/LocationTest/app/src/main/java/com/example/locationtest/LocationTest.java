@@ -22,7 +22,7 @@ public class LocationTest extends Activity implements LocationListener {
 
     private static final String[] ACCURACY = {"invalid", "n/a", "fine",
             "coarse"};
-    private static final String[] POWERREQ = {"invalid", "n/a", "low",
+    private static final String[] POWER_REQ = {"invalid", "n/a", "low",
             "medium", "high"};
     private static final String[] STATUS = {"out of service",
             "temporarily unavailable", "available"};
@@ -121,7 +121,7 @@ public class LocationTest extends Activity implements LocationListener {
                 ",getAccuracy=" +
                 ACCURACY[info.getAccuracy() + 1] +
                 ",getPowerRequirement=" +
-                POWERREQ[info.getPowerRequirement() + 1] +
+                POWER_REQ[info.getPowerRequirement() + 1] +
                 ",hasMonetaryCost=" + info.hasMonetaryCost() +
                 ",requiresCell=" + info.requiresCell() +
                 ",requiresNetwork=" + info.requiresNetwork() +
@@ -140,7 +140,7 @@ public class LocationTest extends Activity implements LocationListener {
         if (location == null)
             log("\nLocation[unknown]");
         else
-            log("\n" + location.toString());
+            log("\n" + location);
     }
 
 
