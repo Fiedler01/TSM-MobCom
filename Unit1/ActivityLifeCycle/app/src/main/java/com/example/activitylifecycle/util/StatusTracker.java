@@ -16,6 +16,8 @@
 
 package com.example.activitylifecycle.util;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -23,9 +25,9 @@ import java.util.Map;
 import java.util.Set;
 
 public class StatusTracker {
-    private Map<String, String> mStatusMap;
-    private List<String> mMethodList;
-    private static StatusTracker ourInstance = new StatusTracker();
+    private final Map<String, String> mStatusMap;
+    private final List<String> mMethodList;
+    private static final StatusTracker ourInstance = new StatusTracker();
     private static final String STATUS_SUFFIX = "ed";
 
     public static StatusTracker getInstance() {
@@ -49,33 +51,37 @@ public class StatusTracker {
     /**
      * Adds the status value for the given activityName into the Map.
      *
-     * @param activityName
-     * @param status
+     * @param activityName the string used to identify the activity
+     * @param status the status to be set
      */
     public void setStatus(String activityName, String status) {
         mMethodList.add(activityName + "." + status + "()");
-        if (mStatusMap.containsKey(activityName)) mStatusMap.remove(activityName);
         mStatusMap.put(activityName, status);
     }
 
     /**
      * Gets the status value for the given activityName.
      *
-     * @param activityName
-     * @return
+     * @param activityName the string used to identify the activity
+     * @return the status of the given activityName
      */
-    public String getStatus(String activityName) {
+    public String getStatus(@NonNull String activityName) {
         String status = mStatusMap.get(activityName);
-        status = status.substring(2, status.length());
+        if (status != null) {
+            status = status.substring(2);
 
-        // String manipulation to ensure the status value is spelled correctly.
-        if (status.endsWith("e")) {
-            status = status.substring(0, status.length() - 1);
+            // String manipulation to ensure the status value is spelled correctly.
+            if (status.endsWith("e")) {
+                status = status.substring(0, status.length() - 1);
+            }
+
+            if (status.endsWith("p")) {
+                status = status + "p";
+            }
+
+            status = status + STATUS_SUFFIX;
         }
-        if (status.endsWith("p")) {
-            status = status + "p";
-        }
-        status = status + STATUS_SUFFIX;
+
         return status;
     }
 

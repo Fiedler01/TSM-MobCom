@@ -18,7 +18,7 @@ public class ActivityC extends Activity {
     private String mActivityName;
     private TextView mStatusView;
     private TextView mStatusAllView;
-    private StatusTracker mStatusTracker = StatusTracker.getInstance();
+    private final StatusTracker mStatusTracker = StatusTracker.getInstance();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
