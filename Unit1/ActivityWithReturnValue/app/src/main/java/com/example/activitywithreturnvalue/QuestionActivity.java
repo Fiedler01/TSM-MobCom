@@ -3,8 +3,6 @@ package com.example.activitywithreturnvalue;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -50,11 +48,7 @@ public class QuestionActivity extends Activity {
 
     private void registerListeners() {
         Button button = findViewById(R.id.question_button_done);
-        button.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        button.setOnClickListener(v -> finish());
     }
 
     private void setQuestionTextForAnswer1(String question) {
