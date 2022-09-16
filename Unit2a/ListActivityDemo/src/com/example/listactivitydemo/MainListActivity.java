@@ -17,7 +17,7 @@ import android.widget.Toast;
  * how it works for the objectives of this lecture.
  * It can be replaced by androidx.ListFragment.
  */
-public class MainActivity extends ListActivity {
+public class MainListActivity extends ListActivity {
     List<String> mValues = new ArrayList<>();
 
     /*
