@@ -2,7 +2,6 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.2'
@@ -11,7 +10,7 @@ buildscript {
 apply plugin: 'com.android.application'
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.fragment:fragment:1.5.2'
 }
 android {
@@ -50,6 +49,5 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
 }
