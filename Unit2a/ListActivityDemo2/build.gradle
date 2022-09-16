@@ -1,6 +1,5 @@
 buildscript {
     repositories {        
-        jcenter()
         mavenCentral()
         google()
     }
@@ -49,6 +48,5 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
 }
