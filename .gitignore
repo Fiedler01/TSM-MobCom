@@ -1,0 +1,16 @@
+local.properties
+gc.properties
+cache.properties
+checksums.lock
+dependencies-accessors.lock
+executionHistory.bin
+executionHistory.lock
+file-system.probe
+fileHashes.bin
+fileHashes.lock
+last-build.bin
+md5-checksums.bin
+outputfiles.bin
+resourceHashesCache.bin
+sha1-checksums.bin
+buildOutputCleanup.lock
