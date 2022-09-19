@@ -3,14 +3,13 @@ package ch.ulrichfiedler.exp;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import java.util.Objects;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 public class LaunchMapFragment extends Fragment {
     Button mapTabButton;
@@ -29,7 +28,7 @@ public class LaunchMapFragment extends Fragment {
         // level
         final Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
 
-        if (Util.canBeResolved(Objects.requireNonNull(getActivity()), mapIntent)) {
+        if (Util.canBeResolved(requireActivity(), mapIntent)) {
             mapTabButton.setEnabled(true);
             mapTabButton.setOnClickListener(arg0 -> startActivity(mapIntent));
         } else {

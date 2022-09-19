@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
      * since API level 27 but it has been used here out of convenience because the
      * focus of this lecture is intent resolution.
      */
+    @SuppressWarnings("deprecation")
     class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
 
