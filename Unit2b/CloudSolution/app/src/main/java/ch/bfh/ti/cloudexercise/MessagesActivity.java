@@ -23,6 +23,8 @@ import java.util.List;
 /**
  * The ListActivity class has been deprecated in API 30 but it is still
  * used here for consistency with the sample code in the previous lectures.
+ *
+ * Thus, please ignore the warning about the default constructor deprecation.
  */
 public class MessagesActivity extends ListActivity {
     private final List<KeyMessagePair> keyMessagePairs = new ArrayList<>();
