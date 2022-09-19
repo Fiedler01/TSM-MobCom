@@ -21,6 +21,7 @@ public class LaunchWebSiteFragment extends Fragment {
             Intent websiteIntent = new Intent(Intent.ACTION_VIEW, url);
             startActivity(websiteIntent);
         });
+
         // Inflate the layout for this fragment
         return view;
     }

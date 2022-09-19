@@ -12,20 +12,17 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 public class LaunchMapFragment extends Fragment {
-    Button mapTabButton;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.maptab, container, false);
-        mapTabButton = view.findViewById(R.id.maptabbutton);
+        Button mapTabButton = view.findViewById(R.id.maptabbutton);
 
         // Map point based on address
         // Uri location = Uri.parse("geo:0,0?q=8400, Loewenstrasse 2");
         // Or map point based on latitude/longitude
-        Uri location = Uri.parse("geo: 47.5093236,8.7186126?z=14"); // z param
-        // is zoom
-        // level
+        Uri location = Uri.parse("geo: 47.5093236,8.7186126?z=14"); // z param is zoom level
         final Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
 
         if (Util.canBeResolved(requireActivity(), mapIntent)) {

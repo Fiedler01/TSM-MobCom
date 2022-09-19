@@ -11,10 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -24,7 +21,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
-    private ViewPager viewPager;
+    private ViewPager2 viewPager;
     private final List<SamplePagerItem> mTabs = new ArrayList<>();
 
     @Override
@@ -34,108 +31,62 @@ public class MainActivity extends AppCompatActivity {
 
         mTabs.add(new SamplePagerItem(getString(R.string.tab_call), // Title
                 Color.BLUE, // Indicator color
-                Color.GRAY, // Divider color
-                new LaunchCallFragment()));
+                Color.GRAY)); // Divider color
 
         mTabs.add(new SamplePagerItem(getString(R.string.tab_map), // Title
                 Color.RED, // Indicator color
-                Color.GRAY, // Divider color
-                new LaunchMapFragment()));
+                Color.GRAY)); // Divider color
 
         mTabs.add(new SamplePagerItem(getString(R.string.tab_web), // Title
                 Color.YELLOW, // Indicator color
-                Color.GRAY, // Divider color
-                new LaunchWebSiteFragment()));
+                Color.GRAY)); // Divider color
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         viewPager = findViewById(R.id.viewpager);
-        viewPager.setAdapter(new SampleFragmentPagerAdapter(getSupportFragmentManager(), 0));
+        viewPager.setAdapter(new ViewStateAdapter(getSupportFragmentManager(), getLifecycle()));
 
         tabLayout = findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+
+        addTabs();
+        addTabListener();
         addPageListener();
     }
 
+    private void addTabs() {
+        tabLayout.addTab(tabLayout.newTab().setText(mTabs.get(0).getTitle()));
+        tabLayout.addTab(tabLayout.newTab().setText(mTabs.get(1).getTitle()));
+        tabLayout.addTab(tabLayout.newTab().setText(mTabs.get(2).getTitle()));
+    }
+
+    private void addTabListener() {
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
+    }
+
     private void addPageListener() {
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            public void onPageScrollStateChanged(int state) {
-            }
-
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
             public void onPageSelected(int position) {
+                tabLayout.selectTab(tabLayout.getTabAt(position));
                 tabLayout.setSelectedTabIndicatorColor(mTabs.get(position).getIndicatorColor());
             }
         });
     }
 
-
-    static class SamplePagerItem {
-        private final CharSequence mTitle;
-        private final int mIndicatorColor;
-        private final int mDividerColor;
-        private final Fragment fragment;
-
-        SamplePagerItem(CharSequence title, int indicatorColor,
-                        int dividerColor, Fragment fragment) {
-            mTitle = title;
-            mIndicatorColor = indicatorColor;
-            mDividerColor = dividerColor;
-            this.fragment = fragment;
-        }
-
-        Fragment getFragment() {
-            return this.fragment;
-        }
-
-        CharSequence getTitle() {
-            return mTitle;
-        }
-
-
-        int getIndicatorColor() {
-            return mIndicatorColor;
-        }
-
-        int getDividerColor() {
-            return mDividerColor;
-        }
-    }
-
-    /**
-     * The {@link androidx.fragment.app.FragmentPagerAdapter} class is deprecated
-     * since API level 27 but it has been used here out of convenience because the
-     * focus of this lecture is intent resolution.
-     */
-    @SuppressWarnings("deprecation")
-    class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
-
-
-        public SampleFragmentPagerAdapter(@NonNull FragmentManager fm, int behavior) {
-            super(fm, behavior);
-        }
-
-        @NonNull
-        @Override
-        public Fragment getItem(int i) {
-            return mTabs.get(i).getFragment();
-        }
-
-        @Override
-        public int getCount() {
-            return mTabs.size();
-        }
-
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mTabs.get(position).getTitle();
-        }
-
-    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
