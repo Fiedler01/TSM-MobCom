@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class DogViewModel(application: Application): AndroidViewModel(application) {
     val readAllDog: LiveData<List<Dog>>
-    val dogRepository:DogRepository
+    private val dogRepository:DogRepository
 
     init {
         val dogDao = AppDatabase.getInstance(application).dogDao()

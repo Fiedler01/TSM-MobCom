@@ -1,10 +1,9 @@
 package com.example.roomdemo.fragment
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.ActionMenuItemView
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomdemo.R
 import com.example.roomdemo.database.Dog
@@ -36,6 +35,7 @@ class DogRecyclerViewAdapter: RecyclerView.Adapter<DogRecyclerViewAdapter.DogVie
         holder.itemView.textViewDogAge.text = currentItem.age.toString()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(dogList: List<Dog>) {
         this.dogList = dogList
         notifyDataSetChanged()

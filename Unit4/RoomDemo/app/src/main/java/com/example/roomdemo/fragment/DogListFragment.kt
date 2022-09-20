@@ -1,12 +1,10 @@
 package com.example.roomdemo.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListAdapter
-import androidx.lifecycle.Observer
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,9 +28,9 @@ class DogList : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        mDogViewModel = ViewModelProvider(this).get(DogViewModel::class.java)
-        mDogViewModel.readAllDog.observe(viewLifecycleOwner, Observer { dog -> adapter.setData(dog) })
-            // observing changes in the LiveData
+        mDogViewModel = ViewModelProvider(this)[DogViewModel::class.java]
+        mDogViewModel.readAllDog.observe(viewLifecycleOwner) { dog -> adapter.setData(dog) }
+        // observing changes in the LiveData
 
 
         view.floatingActionButton.setOnClickListener {

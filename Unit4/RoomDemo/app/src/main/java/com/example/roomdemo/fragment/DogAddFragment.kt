@@ -2,11 +2,11 @@ package com.example.roomdemo.fragment
 
 import android.os.Bundle
 import android.text.TextUtils
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.roomdemo.R
@@ -14,7 +14,6 @@ import com.example.roomdemo.database.Dog
 import com.example.roomdemo.database.DogViewModel
 import kotlinx.android.synthetic.main.fragment_dog_add.*
 import kotlinx.android.synthetic.main.fragment_dog_add.view.*
-import org.w3c.dom.Text
 
 
 class DogAdd : Fragment() {
@@ -29,7 +28,8 @@ class DogAdd : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_dog_add, container, false)
 
-        mDogViewModel = ViewModelProvider(this).get(DogViewModel::class.java)
+        mDogViewModel = ViewModelProvider(this)[DogViewModel::class.java]
+//        mDogViewModel = ViewModelProvider(this)[DogViewModel::class.java]
 
         view.button_add_dog.setOnClickListener {
             insertDogToDatabase()
