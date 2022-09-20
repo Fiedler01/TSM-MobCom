@@ -3,14 +3,10 @@ package com.example.roomdemo.database
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class DogViewModel(application: Application): AndroidViewModel(application) {
     val readAllDog: LiveData<List<Dog>>
-    val dogRepository:DogRepository
+    private val dogRepository:DogRepository
 
     init {
         val dogDao = AppDatabase.getInstance(application).dogDao()

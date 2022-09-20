@@ -1,6 +1,5 @@
 package com.example.roomdemo.database
 
-import android.app.Application
 import androidx.lifecycle.LiveData
 
 class DogRepository(private val dogDao: DogDao) {
