@@ -14,3 +14,5 @@ outputfiles.bin
 resourceHashesCache.bin
 sha1-checksums.bin
 buildOutputCleanup.lock
+.idea/
+
