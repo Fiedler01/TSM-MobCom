@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         CoroutineScope(IO).launch {
             var result = request1()
             result += request2()
-            System.out.println(result);
+            println(result)
         }
     }
 
