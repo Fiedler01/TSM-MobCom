@@ -1,5 +1,6 @@
 <!-- this the layout for the landscape case -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
@@ -10,7 +11,8 @@
         class="com.example.fragmentdemo.TitlesFragment"
         android:layout_width="0px"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        tools:ignore="FragmentTagUsage" />
 
     <FrameLayout
         android:id="@+id/details"

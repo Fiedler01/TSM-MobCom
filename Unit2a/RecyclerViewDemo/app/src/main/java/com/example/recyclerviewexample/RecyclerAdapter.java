@@ -31,7 +31,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
         holder.Tx_country.setText(countryNames.get(position));
         holder.Tx_country_abr.setText(countryAbbreviations.get(position));
-
     }
 
     @Override

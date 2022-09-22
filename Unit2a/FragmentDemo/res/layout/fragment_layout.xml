@@ -1,5 +1,6 @@
 <!-- this the layout for the portrait case -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,6 +8,7 @@
         android:id="@+id/titles"
         class="com.example.fragmentdemo.TitlesFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:ignore="FragmentTagUsage" />
 
 </FrameLayout>
